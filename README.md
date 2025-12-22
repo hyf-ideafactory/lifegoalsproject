@@ -1,16 +1,25 @@
-# React + Vite
+# My Dream Life Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A gamified goal-tracking web application (and transparently, a Christmas present for my partner) where completing goals unlocks dice rolls that lead to real-world rewards. 
 
-Currently, two official plugins are available:
+## Objective
+The goal of this MVP is to...
+- Explore whether gamification and tangible rewards increase follow-through on personal goals
+- To gain more experience with web application development 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How it works
+- The user maintains a list of goals (up to 20)
+- Completing a goal triggers a dice roll (resulting in a value of 1-6)
+- The dice roll moves the user across a 20-tile gameboard
+- Landing on a tile reveals a reward
+- Rewards and updates are sent via email to the user and the administrator of the game
 
-## React Compiler
+## MVP Guardrails
+- Single user
+- No authentication
+- Only one dice roll per completed goal
+- Email serves as the reward contract
+- Built using React + Vite
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Status as of 12/22/2025
+MVP in active development
