@@ -10,12 +10,15 @@ export const REWARDS = [
     { label: "Theater show or live performance 🎭", weight: 3},
     { label: "Planned date night 🍷 (reservation + outfit)", weight: 3},
     { label: "Cooking class (or cook together) 🍝", weight: 3},
+    { label: "Brunch Date 🥞", weight: 3},
     { label: "$50 Fun Money 💵", weight: 3},
 
 
     // Practical/flexible
     { label: "Art class or hobby workshop 🎨", weight: 2}, 
     { label: "$100 Treat Yourself Fund 💸", weight: 2},
+    { label: "Game Night (w/ friends) 🎮", weight: 2},
+    { label: "Winery/Brewery Adventure 🍇", weight: 3},
 
 
     // Big moments
