@@ -1,32 +1,8 @@
-export default function Tile({
-  baseSrc,
-  iconSrc,
-  revealed,
-  claimed,
-  onClick,
-}) {
+export default function Tile({ baseSrc, iconSrc }) {
   return (
-    <div
-      className={`tile ${claimed ? "claimed" : ""}`}
-      onClick={!revealed && !claimed ? onClick : undefined}
-    >
+    <div className="tile">
       <img src={baseSrc} className="tile-base" alt="" />
-
-      {!revealed && (
-        <img src={iconSrc} className="tile-icon" alt="Mystery" />
-      )}
-
-      {revealed && !claimed && (
-        <div className="tile-reveal">
-          <p className="reward-text">Surprise reward 🎁</p>
-        </div>
-      )}
-
-      {claimed && (
-        <div className="tile-claimed">
-          <p>Claimed ✓</p>
-        </div>
-      )}
+      <img src={iconSrc} className="tile-icon" alt="" />
     </div>
   );
 }

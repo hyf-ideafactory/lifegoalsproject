@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Tile from "./Tile";
 
 import tileBase from "../assets/tile-base.svg";
@@ -12,58 +11,28 @@ const ICONS = [
   ...Array(7).fill(sparkleIcon),
 ];
 
-export default function GameBoard() {
-  const [tiles, setTiles] = useState(
-    ICONS.map(icon => ({
-      icon,
-      revealed: false,
-      claimed: false,
-    }))
-  );
-
-  function revealRandomTile() {
-    const unrevealed = tiles
-      .map((t, i) => ({ ...t, i }))
-      .filter(t => !t.revealed && !t.claimed);
-
-    if (unrevealed.length === 0) return;
-
-    const choice =
-      unrevealed[Math.floor(Math.random() * unrevealed.length)];
-
-    setTiles(prev =>
-      prev.map((tile, i) =>
-        i === choice.i ? { ...tile, revealed: true } : tile
-      )
-    );
-  }
-
-  function claimTile(index) {
-    setTiles(prev =>
-      prev.map((tile, i) =>
-        i === index ? { ...tile, claimed: true } : tile
-      )
-    );
-  }
-
+export default function GameBoard({ currentReward, onNotifyReward }) {
   return (
     <div>
-      <button onClick={revealRandomTile}>
-        Reveal Reward
-      </button>
-
       <div className="tile-grid">
-        {tiles.map((tile, index) => (
+        {ICONS.map((icon, index) => (
           <Tile
             key={index}
             baseSrc={tileBase}
-            iconSrc={tile.icon}
-            revealed={tile.revealed}
-            claimed={tile.claimed}
-            onClick={() => claimTile(index)}
+            iconSrc={icon}
           />
         ))}
       </div>
+
+      {currentReward && (
+        <div className="reward-reveal">
+          <h2>You unlocked:</h2>
+          <p>{currentReward}</p>
+          <button onClick={onNotifyReward}>
+            Redeem Reward (click here to send email notification to Jelicia)
+          </button>
+        </div>
+      )}
     </div>
   );
 }

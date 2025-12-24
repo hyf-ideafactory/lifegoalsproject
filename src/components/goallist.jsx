@@ -1,8 +1,11 @@
-export default function GoalList() {
+export default function GoalList({ onGoalCompleted }) {
   return (
-    <aside style={{ width: "280px", paddingRight: "24px" }}>
-      <h2>Goals</h2>
-      <p>(Goal list coming next)</p>
-    </aside>
+    <div style={{ border: "2px solid red", padding: "16px" }}>
+      <p>GoalList is rendering</p>
+
+      <button onClick={onGoalCompleted}>
+        Mark Goal Complete
+      </button>
+    </div>
   );
 }
