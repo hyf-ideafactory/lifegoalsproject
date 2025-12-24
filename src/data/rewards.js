@@ -4,9 +4,12 @@ export const REWARDS = [
     { label: "Coffee shop date ☕", weight : 5}, 
     { label: "Bookstore date 📚 (you get one new book!)", weight: 5},
     { label: "Dessert or ice cream run 🍦", weight : 5}, 
-    { label: "Movies & takeout (at home)🎬", weight : 5},
+    { label: "Movies & takeout (at home) 🎬", weight : 5},
+    { label: "Writing Session (venue TBA) 📝", weight : 5},
+    { label: "Errand day handled for you 🧾", weight : 4},
 
     //Planned experiences (medium cost/effort)
+    { label: "Chore-free weekend 🧼", weight : 4},
     { label: "Theater show or live performance 🎭", weight: 3},
     { label: "Planned date night 🍷 (reservation + outfit)", weight: 3},
     { label: "Cooking class (or cook together) 🍝", weight: 3},
@@ -16,6 +19,7 @@ export const REWARDS = [
 
     // Practical/flexible
     { label: "Art class or hobby workshop 🎨", weight: 2}, 
+    { label: "Dance class (salsa, soca, etc.) 💃🏽", weight: 2},
     { label: "$100 Treat Yourself Fund 💸", weight: 2},
     { label: "Game Night (w/ friends) 🎮", weight: 2},
     { label: "Winery/Brewery Adventure 🍇", weight: 3},
